@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=300&section=header&text=KRISHNA%20VERMA&fontSize=80&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Aspiring%20SDE%20|%202x%20Hackathon%20Winner%20|%20AI/ML%20Engineer&descAlignY=55&descSize=20" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=300&section=header&text=KRISHNA%20VERMA&fontSize=80&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Aspiring%20SDE%20|%201x%20Hackathon%20Winner%20|%20AI/ML%20Engineer&descAlignY=55&descSize=20" />
 
 </div>
 
@@ -58,41 +58,44 @@
 
 ```javascript
 const Krishna = {
-    location: "Noida, India 🇮🇳",
-    education: "BTech AI & ML @ JSS University '29",
-    currentRole: "Campus Ambassador @ Esya IIITD",
-    
-    achievements: {
-        hackathons: [
-            "🥈 2nd @ SnowStorm (NyayNeti)", 
-            "🥈 2nd @ SnowStorm Jamia (Electoral)", 
-            "🥈 1st Runner Up @ Snow Frost"
-        ],
-        speaking: ["2x Gold Medals in Public Speaking"],
-        competitions: ["95.53%ile in Naukri Campus Young Turks 2025"],
-        leadership: ["Led 50+ member team @ Coding Jr"]
-    },
-    
-    projectImpact: {
-        legalTech: "Making law accessible to everyone",
-        democracy: "Preventing electoral fraud", 
-        accessibility: "Supporting neurodivergent children",
-        education: "Helping students succeed"
-    },
-    
-    workExperience: [
-        "Team Lead @ Coding Jr (Led 50+ college students)",
-        "Campus Ambassador @ Esya IIITD (80+ students outreach)",
-        "Tutor @ Edutine (9 months mentoring)",
-        "Volunteer @ AI4Tomorrow"
+  location: "Noida, India 🇮🇳",
+  education: "BTech AI & ML @ JSS University '29",
+  currentRole: "Campus Ambassador @ Esya IIITD",
+
+  achievements: {
+    hackathons: [
+      "🥈 2nd @ SnowStorm (NyayNeti)",
+      "🥈 2nd @ SnowStorm Jamia (Electoral)",
+      "🥈 1st Runner Up @ Snow Frost"
     ],
-    
-    learning: ["CS50X Harvard", "DSA", "Web3", "Mobile Development"],
-    
-    superpower: "Turning complex ideas into simple words AND winning hackathons",
-    
-    funFact: "I can code, speak on stage, AND build apps in 24 hours! 🎤💻🏆"
+    speaking: ["2x Gold Medals in Public Speaking"],
+    competitions: ["95.53%ile in Naukri Campus Young Turks 2025"],
+    leadership: ["Led 50+ member team @ Coding Jr"]
+  },
+
+  projectImpact: {
+    legalTech: "Making law accessible to everyone",
+    democracy: "Preventing electoral fraud",
+    accessibility: "Supporting neurodivergent children",
+    education: "Helping students succeed"
+  },
+
+  workExperience: [
+    "Team Lead @ Coding Jr (Led 50+ college students)",
+    "Campus Ambassador @ Esya IIITD (80+ students outreach)",
+    "Tutor @ Edutine (9 months mentoring)",
+    "Volunteer @ AI4Tomorrow"
+  ],
+
+  learning: ["CS50X Harvard", "DSA", "Web3", "Mobile Development"],
+
+  superpower:
+    "Turning complex ideas into simple words AND winning hackathons",
+
+  funFact:
+    "I can code, speak on stage, AND build apps in 24 hours! 🎤💻🏆"
 };
+
 ```
 
 <br clear="right"/>
