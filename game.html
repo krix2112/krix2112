@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuralVerse Terminal | Krishna Verma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --neon-cyan: #00f7ff;
+            --neon-magenta: #ff006e;
+            --neon-yellow: #ffbe0b;
+            --dark-bg: #0a0e27;
+            --terminal-bg: #0d1117;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+        }
+
+        body {
+            font-family: 'Fira Code', monospace;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Matrix Rain Background */
+        #matrix-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.15;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .glitch-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--neon-cyan);
+            text-shadow: 
+                0 0 10px var(--neon-cyan),
+                0 0 20px var(--neon-cyan),
+                0 0 30px var(--neon-cyan),
+                0 0 40px var(--neon-magenta);
+            animation: glitch 3s infinite;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+        }
+
+        /* Terminal Window */
+        .terminal-window {
+            background: var(--terminal-bg);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 10px;
+            box-shadow: 
+                0 0 20px rgba(0, 247, 255, 0.3),
+                0 0 40px rgba(0, 247, 255, 0.2),
+                inset 0 0 60px rgba(0, 247, 255, 0.05);
+            overflow: hidden;
+            animation: slideInUp 1s ease-out;
+            animation-delay: 0.3s;
+            animation-fill-mode: both;
+        }
+
+        .terminal-header {
+            background: linear-gradient(135deg, #1a1e3e, #0d1117);
+            padding: 1rem;
+            border-bottom: 1px solid var(--neon-cyan);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .terminal-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .terminal-button {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-close { background: #ff5f56; }
+        .btn-minimize { background: #ffbd2e; }
+        .btn-maximize { background: #27c93f; }
+
+        .terminal-button:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        .terminal-title {
+            color: var(--neon-cyan);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .terminal-body {
+            padding: 2rem;
+            min-height: 500px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        /* Custom Scrollbar */
+        .terminal-body::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .terminal-body::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb {
+            background: var(--neon-cyan);
+            border-radius: 5px;
+        }
+
+        .output-line {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .prompt {
+            color: var(--neon-cyan);
+            font-weight: 700;
+        }
+
+        .error {
+            color: var(--neon-magenta);
+        }
+
+        .success {
+            color: #27c93f;
+        }
+
+        .warning {
+            color: var(--neon-yellow);
+        }
+
+        .command-info {
+            color: var(--text-secondary);
+            margin-left: 1rem;
+        }
+
+        .input-line {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        #terminal-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
+            outline: none;
+            caret-color: var(--neon-cyan);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: var(--neon-cyan);
+            animation: blink 1s infinite;
+        }
+
+        /* ASCII Art */
+        .ascii-art {
+            color: var(--neon-cyan);
+            font-size: 0.7rem;
+            line-height: 1.2;
+            white-space: pre;
+            text-shadow: 0 0 5px var(--neon-cyan);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(0, 247, 255, 0.1), rgba(255, 0, 110, 0.1));
+            border: 1px solid var(--neon-cyan);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 247, 255, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--neon-cyan);
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Help Panel */
+        .help-panel {
+            background: rgba(0, 247, 255, 0.05);
+            border-left: 3px solid var(--neon-cyan);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .help-command {
+            color: var(--neon-yellow);
+            font-weight: 700;
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s infinite;
+        }
+
+        /* Animations */
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(0, 247, 255, 0.1));
+            border: 1px solid var(--neon-magenta);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 0, 110, 0.3);
+        }
+
+        .project-title {
+            color: var(--neon-magenta);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tech {
+            color: var(--neon-yellow);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .glitch-title {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .terminal-body {
+                padding: 1rem;
+                min-height: 400px;
+            }
+
+            .ascii-art {
+                font-size: 0.5rem;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            animation: fadeIn 2s ease-out;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            color: var(--neon-cyan);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 700;
+        }
+
+        .social-link:hover {
+            color: var(--neon-magenta);
+            text-shadow: 0 0 10px currentColor;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix-canvas"></canvas>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="glitch-title">NEURALVERSE</h1>
+            <p class="subtitle">// Interactive Terminal Experience //</p>
+        </div>
+
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <button class="terminal-button btn-close"></button>
+                    <button class="terminal-button btn-minimize"></button>
+                    <button class="terminal-button btn-maximize"></button>
+                </div>
+                <div class="terminal-title">krishna@neuralverse:~$</div>
+                <div style="width: 60px;"></div>
+            </div>
+
+            <div class="terminal-body" id="terminal-output">
+                <div class="output-line">
+                    <pre class="ascii-art">
+ ██╗  ██╗██████╗ ██╗███████╗██╗  ██╗███╗   ██╗ █████╗ 
+ ██║ ██╔╝██╔══██╗██║██╔════╝██║  ██║████╗  ██║██╔══██╗
+ █████╔╝ ██████╔╝██║███████╗███████║██╔██╗ ██║███████║
+ ██╔═██╗ ██╔══██╗██║╚════██║██╔══██║██║╚██╗██║██╔══██║
+ ██║  ██╗██║  ██║██║███████║██║  ██║██║ ╚████║██║  ██║
+ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
+                    </pre>
+                </div>
+                <div class="output-line success">
+                    ✓ System initialized successfully
+                </div>
+                <div class="output-line warning">
+                    ⚡ Neural Network: ONLINE
+                </div>
+                <div class="output-line">
+                    Welcome to the NeuralVerse Terminal v2.0
+                </div>
+                <div class="output-line command-info">
+                    Type <span class="help-command">'help'</span> to see available commands
+                </div>
+                <div class="input-line">
+                    <span class="prompt">krishna@neuralverse:~$</span>
+                    <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Made with 💙 by Krishna Verma | 2025</p>
+            <div class="social-links">
+                <a href="https://github.com/krix2112" target="_blank" class="social-link">GitHub</a>
+                <a href="https://linkedin.com/in/krishna-verma-2177b3394" target="_blank" class="social-link">LinkedIn</a>
+                <a href="mailto:krish211207@gmail.com" class="social-link">Email</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Matrix Rain Effect
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01';
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(10, 14, 39, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#00f7ff';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 50);
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Terminal Logic
+        const terminalInput = document.getElementById('terminal-input');
+        const terminalOutput = document.getElementById('terminal-output');
+        let commandHistory = [];
+        let historyIndex = -1;
+
+        const commands = {
+            help: () => {
+                return `
+<div class="help-panel">
+<div class="output-line"><span class="help-command">help</span> - Show available commands</div>
+<div class="output-line"><span class="help-command">about</span> - Learn about Krishna</div>
+<div class="output-line"><span class="help-command">skills</span> - View technical skills</div>
+<div class="output-line"><span class="help-command">projects</span> - See featured projects</div>
+<div class="output-line"><span class="help-command">experience</span> - Work history</div>
+<div class="output-line"><span class="help-command">achievements</span> - Awards and recognition</div>
+<div class="output-line"><span class="help-command">education</span> - Educational background</div>
+<div class="output-line"><span class="help-command">contact</span> - Get in touch</div>
+<div class="output-line"><span class="help-command">social</span> - Social media links</div>
+<div class="output-line"><span class="help-command">hack</span> - 🎮 Play a mini-game</div>
+<div class="output-line"><span class="help-command">quote</span> - Get motivated</div>
+<div class="output-line"><span class="help-command">clear</span> - Clear terminal</div>
+<div class="output-line"><span class="help-command">matrix</span> - Enter the Matrix</div>
+</div>`;
+            },
+
+            about: () => {
+                return `
+<div class="output-line success">╔═══════════════════════════════════════╗</div>
+<div class="output-line success">║   KRISHNA VERMA - PROFILE LOADED     ║</div>
+<div class="output-line success">╚═══════════════════════════════════════╝</div>
+<div class="output-line"></div>
+<div class="output-line">🎯 <span class="warning">Role:</span> Aspiring Software Development Engineer</div>
+<div class="output-line">📍 <span class="warning">Location:</span> Noida, India</div>
+<div class="output-line">🎓 <span class="warning">Education:</span> BTech AI & ML @ JSS University '29</div>
+<div class="output-line">🏆 <span class="warning">Achievements:</span> 2x Hackathon Winner, 2x Gold Medals (Speaking), 95.53%ile National</div>
+<div class="output-line"></div>
+<div class="output-line">💡 I transform complex problems into elegant code solutions.</div>
+<div class="output-line">🎤 I can explain technical concepts to anyone - from beginners to experts.</div>
+<div class="output-line">👥 I've led teams of 50+ students and driven measurable results.</div>
+<div class="output-line">🎮 I've built legal tech, democracy tools, and accessibility apps in hackathons.</div>
+<div class="output-line"></div>
+<div class="output-line command-info">Fun fact: Won hackathons AND public speaking competitions! 🚀</div>`;
+            },
+
+            skills: () => {
+                return `
+<div class="output-line success">⚡ TECHNICAL SKILLS MATRIX ⚡</div>
+<div class="output-line"></div>
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-number">85%</div>
+        <div class="stat-label">JavaScript</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">80%</div>
+        <div class="stat-label">React.js</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">75%</div>
+        <div class="stat-label">Python</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">70%</div>
+        <div class="stat-label">DSA</div>
+    </div>
+</div>
+<div class="output-line"></div>
+<div class="output-line warning">🔧 Languages:</div>
+<div class="output-line command-info">JavaScript, Python, C, HTML5, CSS3, SQL</div>
+<div class="output-line"></div>
+<div class="output-line warning">📚 Frameworks & Libraries:</div>
+<div class="output-line command-info">React.js, Node.js, Firebase, Web3.js</div>
+<div class="output-line"></div>
+<div class="output-line warning">🛠️ Tools:</div>
+<div class="output-line command-info">Git, GitHub, VS Code, Vercel, Google App Script</div>
+<div class="output-line"></div>
+<div class="output-line warning">🌱 Currently Learning:</div>
+<div class="output-line command-info">Android Development, Blockchain, Machine Learning</div>`;
+            },
+
+            projects: () => {
+                return `
+<div class="output-line success">🚀 FEATURED PROJECTS</div>
+<div class="output-line"></div>
+<div class="output-line warning">🏆 HACKATHON WINNERS 🏆</div>
+<div class="output-line"></div>
+<div class="project-card">
+    <div class="project-title">⚖️ NyayNeti MVP - Legal AI Chatbot</div>
+    <div class="project-tech">🥈 2nd Place @ SnowStorm 24hr Hackathon | JavaScript, AI, PDF Processing</div>
+    <div class="output-line">Revolutionary legal accessibility tool! Offline AI chatbot that processes PDF legal documents, compares them intelligently, and provides legal guidance without internet. Built in 24 hours!</div>
+    <div class="output-line command-info">🔗 github.com/krix2112/nyayneti-mvp-offline</div>
+</div>
+<div class="project-card">
+    <div class="project-title">🗳️ Electoral Roll Tracker - Democracy Guardian</div>
+    <div class="project-tech">🥈 2nd Place @ SnowStorm Jamia Hamdard | JavaScript, Git-like System</div>
+    <div class="output-line">Git for democracy! Tracks electoral roll changes (additions/deletions) to prevent voter fraud. Version control system for transparent election monitoring.</div>
+    <div class="output-line command-info">🔗 github.com/krix2112/electoral-roll-tracker</div>
+</div>
+<div class="project-card">
+    <div class="project-title">🧠 NeuroLens - AI for Autistic Children</div>
+    <div class="project-tech">🏅 Built @ Secureverse Hackathon | Kotlin, Firebase, Ollama AI</div>
+    <div class="output-line">Compassionate AI companion for autistic children. On-device chatbot providing emotional support, routine management, and cognitive assistance with complete privacy.</div>
+    <div class="output-line command-info">🔗 github.com/krix2112/Neurolens-mvp</div>
+</div>
+<div class="output-line"></div>
+<div class="output-line warning">💡 PERSONAL PROJECTS 💡</div>
+<div class="output-line"></div>
+<div class="project-card">
+    <div class="project-title">🌌 CosmoStudy (AstroFocus) - Campus Productivity Hub</div>
+    <div class="project-tech">⚡ Tech: React.js, TypeScript</div>
+    <div class="output-line">Campus-needed student productivity app! Study timers, assignment tracking, attendance heatmaps, and collaboration tools. Built to help students succeed and connect on campus.</div>
+    <div class="output-line command-info">🔗 astro-focus-study-tracker-hncr.vercel.app</div>
+</div>
+<div class="project-card">
+    <div class="project-title">💎 NFT Metadata Viewer - Web3 Explorer</div>
+    <div class="project-tech">⚡ Tech: Aptos, Web3.js</div>
+    <div class="output-line">Web3-based NFT explorer for Aptos blockchain. Fetch, parse, and display on-chain metadata with complete transparency. Built during Aptos Bootcamp.</div>
+    <div class="output-line command-info">🔗 github.com/krix2112/NFT-METADATA-VIEWER</div>
+</div>
+<div class="output-line"></div>
+<div class="output-line success">📊 Stats: 6 projects | 2 hackathon wins | 2 live deployments</div>`;
+            },
+
+            experience: () => {
+                return `
+<div class="output-line success">💼 WORK EXPERIENCE</div>
+<div class="output-line"></div>
+<div class="output-line warning">Campus Ambassador @ Esya IIITD (2025-Present)</div>
+<div class="output-line command-info">• Led outreach for flagship tech fest</div>
+<div class="output-line command-info">• Drove 80+ students to participate</div>
+<div class="output-line command-info">• Skills: Marketing, Event Promotion, Networking</div>
+<div class="output-line"></div>
+<div class="output-line warning">Team Lead @ Coding Jr (May 2025 - Aug 2025)</div>
+<div class="output-line command-info">• Managed 50+ college students across India</div>
+<div class="output-line command-info">• 100% on-time project completion</div>
+<div class="output-line command-info">• Skills: Leadership, Google App Script, Operations</div>
+<div class="output-line"></div>
+<div class="output-line warning">Tutor @ Edutine (Oct 2024 - Jun 2025)</div>
+<div class="output-line command-info">• Mentored students across subjects</div>
+<div class="output-line command-info">• Improved exam performance significantly</div>
+<div class="output-line command-info">• Skills: Teaching, Mentoring, Problem-Solving</div>
+<div class="output-line"></div>
+<div class="output-line warning">Volunteer @ AI4Tomorrow (Oct 2024 - Feb 2025)</div>
+<div class="output-line command-info">• Created AI awareness in community</div>
+<div class="output-line command-info">• Helped integrate AI tools in daily life</div>
+<div class="output-line command-info">• Skills: AI Tools, Community Engagement</div>`;
+            },
+
+            achievements: () => {
+                return `
+<div class="output-line success">🏆 ACHIEVEMENTS UNLOCKED</div>
+<div class="output-line"></div>
+<div class="output-line">🥈 <span class="warning">2nd Place @ SnowStorm Hackathon</span> - NyayNeti MVP (24hr build!)</div>
+<div class="output-line">🥈 <span class="warning">2nd Place @ SnowStorm Jamia Hamdard</span> - Electoral Roll Tracker</div>
+<div class="output-line">🥇 <span class="warning">2x Gold Medals</span> - Public Speaking Competitions</div>
+<div class="output-line">⭐ <span class="warning">95.53 Percentile</span> - Naukri Campus Young Turks 2025</div>
+<div class="output-line">🥈 <span class="warning">1st Runner Up</span> - Snow Frost Hackathon</div>
+<div class="output-line">👨‍💼 <span class="warning">Team Leadership</span> - Led 50+ College Students</div>
+<div class="output-line">📢 <span class="warning">Campus Ambassador</span> - 80+ Students Outreach</div>
+<div class="output-line">🎓 <span class="warning">Certificate of Merit</span> - National Competition</div>
+<div class="output-line">🎮 <span class="warning">3 Hackathon Projects</span> - All functional & deployed</div>
+<div class="output-line"></div>
+<div class="output-line command-info">Status: Collecting more achievements... 🚀</div>`;
+            },
+
+            education: () => {
+                return `
+<div class="output-line success">🎓 EDUCATION</div>
+<div class="output-line"></div>
+<div class="output-line warning">JSS University, Noida</div>
+<div class="output-line command-info">• Bachelor of Technology - BTech</div>
+<div class="output-line command-info">• Major: Artificial Intelligence & Machine Learning</div>
+<div class="output-line command-info">• Duration: 2025 - 2029</div>
+<div class="output-line command-info">• Status: Currently pursuing</div>
+<div class="output-line"></div>
+<div class="output-line warning">Kendriya Vidyalaya, New Delhi</div>
+<div class="output-line command-info">• High School Diploma (Science)</div>
+<div class="output-line command-info">• Duration: 2013 - 2025</div>
+<div class="output-line command-info">• Graduated with excellent grades</div>
+<div class="output-line"></div>
+<div class="output-line warning">Additional Learning:</div>
+<div class="output-line command-info">• CS50X - Harvard University</div>
+<div class="output-line command-info">• Data Science - Code with Harry</div>
+<div class="output-line command-info">• DSA & Problem Solving</div>`;
+            },
+
+            contact: () => {
+                return `
+<div class="output-line success">📬 CONTACT INFORMATION</div>
+<div class="output-line"></div>
+<div class="output-line">📧 <span class="warning">Email:</span> krish211207@gmail.com</div>
+<div class="output-line">📱 <span class="warning">Phone:</span> +91 81783 60741</div>
+<div class="output-line">📍 <span class="warning">Location:</span> Noida, India 201301</div>
+<div class="output-line"></div>
+<div class="output-line command-info">Feel free to reach out for collaborations, projects, or just to say hi! 👋</div>`;
+            },
+
+            social: () => {
+                return `
+<div class="output-line success">🌐 SOCIAL LINKS</div>
+<div class="output-line"></div>
+<div class="output-line">🐙 <span class="warning">GitHub:</span> github.com/krix2112</div>
+<div class="output-line">💼 <span class="warning">LinkedIn:</span> linkedin.com/in/krishna-verma-2177b3394</div>
+<div class="output-line">📧 <span class="warning">Email:</span> krish211207@gmail.com</div>
+<div class="output-line"></div>
+<div class="output-line command-info">Let's connect and build something amazing together! 🚀</div>`;
+            },
+
+            hack: () => {
+                const responses = [
+                    "Access granted... Just kidding! 😄",
+                    "Hacking the mainframe... 10%... 50%... 100%... Just having fun! 🎮",
+                    "You found the easter egg! 🥚 You're officially a curious developer!",
+                    "System breach detected... It's you! Welcome, hacker! 👾",
+                    "Initiating neural link... Connection established! 🧠"
+                ];
+                return `<div class="output-line success">${responses[Math.floor(Math.random() * responses.length)]}</div>`;
+            },
+
+            quote: () => {
+                const quotes = [
+                    '"Code is poetry written in logic." - Krishna',
+                    '"The best time to plant a tree was 20 years ago. The second best time is now."',
+                    '"First, solve the problem. Then, write the code." - John Johnson',
+                    '"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." - Martin Fowler',
+                    '"The only way to do great work is to love what you do." - Steve Jobs'
+                ];
+                const quote = quotes[Math.floor(Math.random() * quotes.length)];
+                return `<div class="output-line warning">${quote}</div>`;
+            },
+
+            matrix: () => {
+                return `
+<div class="output-line success">Entering the Matrix...</div>
+<div class="output-line warning">Wake up, Neo...</div>
+<div class="output-line">The Matrix has you...</div>
+<div class="output-line success">Follow the white rabbit. 🐰</div>
+<div class="output-line"></div>
+<div class="output-line command-info">But seriously, check out the matrix rain in the background! ✨</div>`;
+            },
+
+            clear: () => 'CLEAR',
+
+            ls: () => {
+                return `
+<div class="output-line">about.txt</div>
+<div class="output-line">skills.json</div>
+<div class="output-line">projects/</div>
+<div class="output-line">experience.log</div>
+<div class="output-line">achievements.dat</div>`;
+            }
+        };
+
+        terminalInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const command = terminalInput.value.trim().toLowerCase();
+                
+                if (command) {
+                    commandHistory.push(command);
+                    historyIndex = commandHistory.length;
+
+                    const inputLine = document.createElement('div');
+                    inputLine.className = 'output-line';
+                    inputLine.innerHTML = `<span class="prompt">krishna@neuralverse:~$</span> ${command}`;
+                    terminalOutput.insertBefore(inputLine, terminalOutput.querySelector('.input-line'));
+
+                    if (command === 'clear') {
+                        const outputLines = terminalOutput.querySelectorAll('.output-line');
+                        outputLines.forEach(line => {
+                            if (!line.classList.contains('input-line')) {
+                                line.remove();
+                            }
+                        });
+                    } else if (commands[command]) {
+                        const output = commands[command]();
+                        const outputDiv = document.createElement('div');
+                        outputDiv.innerHTML = output;
+                        terminalOutput.insertBefore(outputDiv, terminalOutput.querySelector('.input-line'));
+                    } else {
+                        const errorDiv = document.createElement('div');
+                        errorDiv.className = 'output-line error';
+                        errorDiv.textContent = `Command not found: ${command}. Type 'help' for available commands.`;
+                        terminalOutput.insertBefore(errorDiv, terminalOutput.querySelector('.input-line'));
+                    }
+
+                    terminalInput.value = '';
+                    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+                }
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (historyIndex > 0) {
+                    historyIndex--;
+                    terminalInput.value = commandHistory[historyIndex];
+                }
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    terminalInput.value = commandHistory[historyIndex];
+                } else {
+                    historyIndex = commandHistory.length;
+                    terminalInput.value = '';
+                }
+            }
+        });
+
+        // Keep input focused
+        terminalOutput.addEventListener('click', () => {
+            terminalInput.focus();
+        });
+
+        // Easter egg: Konami code
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.key);
+            konamiCode = konamiCode.slice(-10);
+
+            if (konamiCode.join(',') === konamiSequence.join(',')) {
+                const easterEgg = document.createElement('div');
+                easterEgg.className = 'output-line success';
+                easterEgg.innerHTML = '🎮 <span class="warning">KONAMI CODE ACTIVATED!</span> You are a true gamer! 🏆';
+                terminalOutput.insertBefore(easterEgg, terminalOutput.querySelector('.input-line'));
+                terminalOutput.scrollTop = terminalOutput.scrollHeight;
+            }
+        });
+    </script>
+</body>
+</html>
