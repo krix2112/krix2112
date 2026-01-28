@@ -233,13 +233,12 @@ Campus-needed student productivity app! Study timers, assignment tracking, atten
 <img src="https://user-images.githubusercontent.com/74038190/216122069-5b8169d7-1d8e-4a13-b245-a8e4176c99f8.png" alt="Trophy" width="100" />
 
 ```
-╔═══════════════════════════════════════════════════════════════╗
-║  🥈  2nd Place - SnowStorm Hackathon (NyayNeti MVP)          ║
+╔═══════════════════════════════════════════════════════════════╗       
 ║  🥈  2nd Place - SnowStorm Jamia Hamdard (Electoral Roll)    ║
 ║  🥇  2x Gold Medals - Public Speaking Competitions           ║
 ║  🏆  95.53%ile - Naukri Campus Young Turks 2025              ║
 ║  🥈  1st Runner Up - Snow Frost Hackathon                    ║
-║  👨‍💼  Team Lead - Managed 50+ College Students                 ║
+║  👨‍💼  Team Lead - Managed 50+ College Students                ║
 ║  📢  Campus Ambassador - 80+ Students Outreach               ║
 ║  ⭐  Certificate of Merit - Top National Performance         ║
 ║  🎮  3 Hackathon Projects - All functional & deployed        ║
