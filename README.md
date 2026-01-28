@@ -2,6 +2,10 @@
 
 <div align="center">
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=300&section=header&text=KRISHNA%20VERMA&fontSize=80&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Aspiring%20SDE%20|%202x%20Hackathon%20Winner%20|%20AI/ML%20Engineer&descAlignY=55&descSize=20" />
+
+</div>
+
 ```
 ███╗   ██╗███████╗██╗   ██╗██████╗  █████╗ ██╗     
 ████╗  ██║██╔════╝██║   ██║██╔══██╗██╔══██╗██║     
@@ -18,13 +22,17 @@
   ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝          
 ```
 
-### 🎯 **Aspiring SDE | 2x Hackathon Winner | AI/ML Engineer | Public Speaker**
+<div align="center">
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Building+the+future%2C+one+line+at+a+time;2x+Hackathon+Winner+%7C+2x+Gold+Medalist;Team+Lead+%7C+Campus+Ambassador;React+%7C+JavaScript+%7C+AI%2FML;Legal+Tech+%7C+Democracy+Tools+%7C+Accessibility;Always+learning%2C+always+growing" alt="Typing SVG" />
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 
 </div>
 
 ---
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ## 🎮 **PLAY THE PROFILE GAME!**
 
@@ -36,11 +44,17 @@
 
 *Hint: Try commands like `help`, `about`, `projects`, `skills`, `hack`*
 
+<img src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d899-44b4-b1d9-4eeccf656e44.gif" width="400">
+
 </div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ---
 
 ## 🧠 **NEURAL NETWORK: WHO AM I?**
+
+<img align="right" alt="Coding" width="400" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif">
 
 ```javascript
 const Krishna = {
@@ -49,7 +63,11 @@ const Krishna = {
     currentRole: "Campus Ambassador @ Esya IIITD",
     
     achievements: {
-        hackathons: ["🥈 2nd @ SnowStorm (NyayNeti)", "🥈 2nd @ SnowStorm Jamia (Electoral)", "🥈 1st Runner Up @ Snow Frost"],
+        hackathons: [
+            "🥈 2nd @ SnowStorm (NyayNeti)", 
+            "🥈 2nd @ SnowStorm Jamia (Electoral)", 
+            "🥈 1st Runner Up @ Snow Frost"
+        ],
         speaking: ["2x Gold Medals in Public Speaking"],
         competitions: ["95.53%ile in Naukri Campus Young Turks 2025"],
         leadership: ["Led 50+ member team @ Coding Jr"]
@@ -77,36 +95,38 @@ const Krishna = {
 };
 ```
 
+<br clear="right"/>
+
 ---
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ## 🚀 **TECH STACK: MY ARSENAL**
 
 <div align="center">
 
-### **Languages**
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+<img src="https://techstack-generator.vercel.app/js-icon.svg" alt="JavaScript" width="65" height="65" />
+<img src="https://techstack-generator.vercel.app/react-icon.svg" alt="React" width="65" height="65" />
+<img src="https://techstack-generator.vercel.app/python-icon.svg" alt="Python" width="65" height="65" />
+<img src="https://techstack-generator.vercel.app/cpp-icon.svg" alt="C++" width="65" height="65" />
+<img src="https://techstack-generator.vercel.app/github-icon.svg" alt="GitHub" width="65" height="65" />
+<img src="https://techstack-generator.vercel.app/prettier-icon.svg" alt="Prettier" width="65" height="65" />
 
-### **Frameworks & Libraries**
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+### **Languages & Frameworks**
+
+<img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,c,html,css,firebase,kotlin,java&theme=dark&perline=11" />
 
 ### **Tools & Platforms**
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+<img src="https://skillicons.dev/icons?i=git,github,vscode,vercel,figma,linux,bash,docker,postman,npm&theme=dark&perline=10" />
 
 ### **Currently Learning**
-![Aptos](https://img.shields.io/badge/Aptos-000000?style=for-the-badge&logo=aptos&logoColor=white)
-![Web3](https://img.shields.io/badge/Web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+
+<img src="https://skillicons.dev/icons?i=solidity,flutter,tensorflow,mongodb,redis&theme=dark&perline=5" />
 
 </div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ---
 
@@ -114,41 +134,81 @@ const Krishna = {
 
 <div align="center">
 
+<img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="100">
+
 ### **🥇 HACKATHON WINNERS**
-
-| 🎯 Project | 🏆 Achievement | 🛠️ Tech Stack | ⚡ What It Does | 🔗 Link |
-|-----------|---------------|--------------|----------------|---------|
-| **⚖️ NyayNeti MVP** | 🥈 2nd Position @ SnowStorm Hackathon | JavaScript, AI, PDF Processing | 24-hour hackathon build! Legal chatbot with offline AI. Processes PDFs, compares legal documents, and provides intelligent responses without internet | [View Code](https://github.com/krix2112/nyayneti-mvp-offline) |
-| **🗳️ Electoral Roll Tracker** | 🥈 2nd Position @ SnowStorm Jamia Hamdard | JavaScript, Git-like tracking | Democracy fraud detection system! Tracks electoral roll changes (additions/deletions) like Git version control. Prevents voter fraud through transparent change tracking | [View Code](https://github.com/krix2112/electoral-roll-tracker) |
-| **🧠 NeuroLens** | 🏅 Built @ Secureverse Hackathon | Kotlin, Firebase, Ollama AI | AI-powered companion for autistic children. On-device chatbot providing emotional support, routine management & cognitive assistance. Privacy-first architecture | [View Code](https://github.com/krix2112/Neurolens-mvp) |
-
-### **🚀 PERSONAL PROJECTS**
-
-| 🎯 Project | 🛠️ Tech Stack | ⚡ What It Does | 🔗 Link |
-|-----------|--------------|----------------|---------|
-| **🌌 CosmoStudy (AstroFocus)** | React.js, TypeScript | Campus-needed productivity app! Study timers, assignment tracking, attendance heatmaps & student collaboration. Built to connect with students on campus | [Live Demo](https://astro-focus-study-tracker-hncr.vercel.app) |
-| **💎 NFT Metadata Viewer** | Aptos, Web3.js | Web3-based NFT explorer for Aptos blockchain. Fetch, parse & display on-chain metadata with complete transparency. Built during Aptos Bootcamp | [View Code](https://github.com/krix2112/NFT-METADATA-VIEWER) |
 
 </div>
 
----
+<table>
+<tr>
+<td width="50%" valign="top">
 
-## 🎯 **PROJECT HIGHLIGHTS**
+### ⚖️ NyayNeti MVP
+**🥈 2nd Place @ SnowStorm 24hr Hackathon**
 
-```javascript
-const projectStats = {
-    totalProjects: 6,
-    hackathonWins: 2, // 🥈🥈 Two 2nd place finishes!
-    liveDeployments: 2,
-    technologies: ["React", "JavaScript", "Kotlin", "AI/ML", "Web3", "Firebase"],
-    impact: {
-        nyayneti: "Solving legal accessibility in India",
-        electoralRoll: "Preventing democracy fraud",
-        neuroLens: "Supporting neurodivergent children",
-        cosmoStudy: "Helping students succeed"
-    }
-};
-```
+<img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" alt="Legal Tech" width="100%"/>
+
+**Tech:** JavaScript, AI, PDF Processing
+
+Revolutionary legal accessibility tool! Offline AI chatbot that processes PDF legal documents, compares them intelligently, and provides legal guidance without internet. Built in 24 hours!
+
+[![Repo](https://img.shields.io/badge/View_Code-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/krix2112/nyayneti-mvp-offline)
+
+</td>
+<td width="50%" valign="top">
+
+### 🗳️ Electoral Roll Tracker
+**🥈 2nd Place @ SnowStorm Jamia Hamdard**
+
+<img src="https://user-images.githubusercontent.com/74038190/229223156-0cbdaba9-3128-4d8e-8719-b6b4cf741b67.gif" alt="Democracy" width="100%"/>
+
+**Tech:** JavaScript, Git-like System
+
+Git for democracy! Tracks electoral roll changes (additions/deletions) to prevent voter fraud. Version control system for transparent election monitoring.
+
+[![Repo](https://img.shields.io/badge/View_Code-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/krix2112/electoral-roll-tracker)
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top">
+
+### 🧠 NeuroLens
+**🏅 Built @ Secureverse Hackathon**
+
+<img src="https://user-images.githubusercontent.com/74038190/235224431-e8c8c12e-6826-47f1-89fb-2ddad83b3abf.gif" alt="AI Brain" width="100%"/>
+
+**Tech:** Kotlin, Firebase, Ollama AI
+
+Compassionate AI companion for autistic children. On-device chatbot providing emotional support, routine management, and cognitive assistance with complete privacy.
+
+[![Repo](https://img.shields.io/badge/View_Code-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/krix2112/Neurolens-mvp)
+
+</td>
+<td width="50%" valign="top">
+
+### 🌌 CosmoStudy
+**Personal Project / Campus Tool**
+
+<img src="https://user-images.githubusercontent.com/74038190/212749447-bfb7e725-6987-49d9-ae85-2015e3e7cc41.gif" alt="Space" width="100%"/>
+
+**Tech:** React.js, TypeScript
+
+Campus-needed student productivity app! Study timers, assignment tracking, attendance heatmaps, and collaboration tools. Built to help students succeed on campus.
+
+[![Live](https://img.shields.io/badge/Live_Demo-FF5722?style=for-the-badge&logo=vercel&logoColor=white)](https://astro-focus-study-tracker-hncr.vercel.app)
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
+
+</div>
 
 ---
 
@@ -156,30 +216,32 @@ const projectStats = {
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=krix2112&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=00f7ff&icon_color=00f7ff&text_color=c9d1d9"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=krix2112&custom_title=Krishna's%20Contribution%20Graph&bg_color=0D1117&color=00f7ff&line=00f7ff&point=ffffff&area=true&hide_border=true" alt="GitHub Activity Graph" />
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=krix2112&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f7ff&text_color=c9d1d9"/>
+<br/>
 
-</div>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=krix2112&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=00f7ff&icon_color=00f7ff&text_color=c9d1d9&ring_color=ff006e"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=krix2112&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00f7ff&text_color=c9d1d9&langs_count=8"/>
 
-<div align="center">
+<br/>
 
-### **🔥 GitHub Streak**
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=krix2112&theme=radical&hide_border=true&background=0D1117&stroke=00F7FF&ring=00F7FF&fire=FF6B6B&currStreakLabel=00F7FF" alt="GitHub Streak" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=krix2112&theme=tokyonight&hide_border=true&background=0D1117&stroke=00F7FF&ring=ff006e&fire=FF6B6B&currStreakLabel=00F7FF&sideNums=00F7FF&currStreakNum=ffffff&sideLabels=c9d1d9&dates=c9d1d9" alt="GitHub Streak" />
 
-### **🏆 GitHub Trophies**
-<img src="https://github-profile-trophy.vercel.app/?username=krix2112&theme=radical&no-frame=true&no-bg=true&row=1&column=7" alt="GitHub Trophies" />
+<br/>
 
-### **📈 Contribution Graph**
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=krix2112&theme=react-dark&hide_border=true&bg_color=0D1117&color=00F7FF&line=00F7FF&point=FF6B6B" alt="Contribution Graph" />
+<img src="https://github-profile-trophy.vercel.app/?username=krix2112&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7&margin-w=15&margin-h=15" alt="GitHub Trophies" />
 
 </div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ---
 
 ## 🎯 **ACHIEVEMENTS UNLOCKED**
 
 <div align="center">
+
+<img src="https://user-images.githubusercontent.com/74038190/216122069-5b8169d7-1d8e-4a13-b245-a8e4176c99f8.png" alt="Trophy" width="100" />
 
 ```
 ╔═══════════════════════════════════════════════════════════════╗
@@ -197,9 +259,13 @@ const projectStats = {
 
 </div>
 
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
+
 ---
 
 ## 💼 **BATTLE-TESTED EXPERIENCE**
+
+<img align="right" alt="Work" width="350" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif">
 
 ```python
 experience_timeline = {
@@ -230,23 +296,30 @@ experience_timeline = {
 }
 ```
 
+<br clear="right"/>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
+
 ---
 
 ## 🌟 **SKILL MATRIX: LEVEL UP!**
 
 <div align="center">
 
-| **Skill** | **Level** | **XP** |
-|-----------|-----------|--------|
-| 💻 **Programming** | ⭐⭐⭐⭐☆ | `████████░░ 80%` |
-| 🎤 **Public Speaking** | ⭐⭐⭐⭐⭐ | `██████████ 95%` |
-| 👥 **Team Leadership** | ⭐⭐⭐⭐⭐ | `██████████ 90%` |
-| 🧠 **AI/ML** | ⭐⭐⭐☆☆ | `██████░░░░ 60%` |
-| 🌐 **Web3** | ⭐⭐⭐☆☆ | `█████░░░░░ 50%` |
-| 📱 **Mobile Dev** | ⭐⭐⭐☆☆ | `█████░░░░░ 55%` |
-| 🎨 **Frontend** | ⭐⭐⭐⭐☆ | `████████░░ 75%` |
+| **Skill Category** | **Technologies** | **Proficiency** |
+|-------------------|------------------|-----------------|
+| 💻 **Frontend** | React, JavaScript, TypeScript, HTML/CSS | ![](https://geps.dev/progress/85?dangerColor=800000&warningColor=ff9900&successColor=00f7ff) |
+| 🔧 **Backend** | Node.js, Firebase, REST APIs | ![](https://geps.dev/progress/75?dangerColor=800000&warningColor=ff9900&successColor=00f7ff) |
+| 📱 **Mobile** | Kotlin, Android, React Native | ![](https://geps.dev/progress/70?dangerColor=800000&warningColor=ff9900&successColor=00f7ff) |
+| 🧠 **AI/ML** | Python, TensorFlow, Ollama | ![](https://geps.dev/progress/65?dangerColor=800000&warningColor=ff9900&successColor=00f7ff) |
+| 🌐 **Web3** | Aptos, Web3.js, Smart Contracts | ![](https://geps.dev/progress/60?dangerColor=800000&warningColor=ff9900&successColor=00f7ff) |
+| 🎤 **Soft Skills** | Public Speaking, Leadership, Communication | ![](https://geps.dev/progress/95?dangerColor=800000&warningColor=ff9900&successColor=00f7ff) |
+
+<img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400">
 
 </div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ---
 
@@ -254,15 +327,46 @@ experience_timeline = {
 
 <div align="center">
 
-```
-📖 CS50X by Harvard                    [████████░░] 80%
-🐍 Data Science with Python            [██████░░░░] 60%
-🔗 Web3 & Blockchain Development       [████░░░░░░] 40%
-📊 Data Structures & Algorithms        [███████░░░] 70%
-🤖 Machine Learning Specialization     [█████░░░░░] 50%
-```
+<table>
+<tr>
+<td align="center" width="33%">
+<img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width="100"/>
+<br><b>CS50X Harvard</b>
+<br>![](https://geps.dev/progress/80?dangerColor=800000&warningColor=ff9900&successColor=00f7ff)
+</td>
+<td align="center" width="33%">
+<img src="https://user-images.githubusercontent.com/74038190/212257472-08e52665-c503-4bd9-aa20-f5a4dae769b5.gif" width="100"/>
+<br><b>Data Structures & Algorithms</b>
+<br>![](https://geps.dev/progress/70?dangerColor=800000&warningColor=ff9900&successColor=00f7ff)
+</td>
+<td align="center" width="33%">
+<img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385dfa7ed2.gif" width="100"/>
+<br><b>Web3 Development</b>
+<br>![](https://geps.dev/progress/50?dangerColor=800000&warningColor=ff9900&successColor=00f7ff)
+</td>
+</tr>
+<tr>
+<td align="center" width="33%">
+<img src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif" width="100"/>
+<br><b>Machine Learning</b>
+<br>![](https://geps.dev/progress/60?dangerColor=800000&warningColor=ff9900&successColor=00f7ff)
+</td>
+<td align="center" width="33%">
+<img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="100"/>
+<br><b>Mobile Development</b>
+<br>![](https://geps.dev/progress/55?dangerColor=800000&warningColor=ff9900&successColor=00f7ff)
+</td>
+<td align="center" width="33%">
+<img src="https://user-images.githubusercontent.com/74038190/212257460-738ff738-247f-4445-a718-cdd0ca76e2db.gif" width="100"/>
+<br><b>System Design</b>
+<br>![](https://geps.dev/progress/45?dangerColor=800000&warningColor=ff9900&successColor=00f7ff)
+</td>
+</tr>
+</table>
 
 </div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ---
 
@@ -270,25 +374,32 @@ experience_timeline = {
 
 <div align="center">
 
-| Language | Proficiency | Usage |
-|----------|-------------|-------|
-| 🇮🇳 **Hindi** | Native (C2) | `██████████` 100% |
-| 🇬🇧 **English** | Advanced (C1) | `█████████░` 90% |
-| 🇩🇪 **German** | Elementary (A2) | `███░░░░░░░` 30% |
+<table>
+<tr>
+<td align="center" width="33%">
+<img src="https://cdn-icons-png.flaticon.com/512/323/323329.png" width="80"/>
+<br><b>🇮🇳 Hindi</b>
+<br>Native (C2)
+<br>![](https://geps.dev/progress/100?dangerColor=800000&warningColor=ff9900&successColor=00f7ff)
+</td>
+<td align="center" width="33%">
+<img src="https://cdn-icons-png.flaticon.com/512/323/323329.png" width="80"/>
+<br><b>🇬🇧 English</b>
+<br>Advanced (C1)
+<br>![](https://geps.dev/progress/90?dangerColor=800000&warningColor=ff9900&successColor=00f7ff)
+</td>
+<td align="center" width="33%">
+<img src="https://cdn-icons-png.flaticon.com/512/323/323329.png" width="80"/>
+<br><b>🇩🇪 German</b>
+<br>Elementary (A2)
+<br>![](https://geps.dev/progress/30?dangerColor=800000&warningColor=ff9900&successColor=00f7ff)
+</td>
+</tr>
+</table>
 
 </div>
 
----
-
-## 🎵 **CODING VIBES: CURRENT ROTATION**
-
-<div align="center">
-
-<img src="https://spotify-recently-played-readme.vercel.app/api?user=31ggqm4zltcaz6sqy7mw4z5lwkke&count=5&unique=true" alt="Spotify Recently Played" />
-
-*⚡ Fun fact: 70% of my code is written while listening to lo-fi beats!*
-
-</div>
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ---
 
@@ -296,9 +407,11 @@ experience_timeline = {
 
 <div align="center">
 
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random Dev Quote" />
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&border=true" alt="Random Dev Quote" />
 
 </div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ---
 
@@ -306,12 +419,26 @@ experience_timeline = {
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-verma-2177b3394/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/krix2112)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:krish211207@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://github.com/krix2112)
+<a href="https://www.linkedin.com/in/krishna-verma-2177b3394/">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="https://github.com/krix2112">
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+<a href="mailto:krish211207@gmail.com">
+  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+<a href="tel:+918178360741">
+  <img src="https://img.shields.io/badge/Phone-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+</a>
+
+<br/><br/>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d899-44b4-b1d9-4eeccf656e44.gif" width="400">
 
 </div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ---
 
@@ -319,11 +446,13 @@ experience_timeline = {
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=krix2112&label=Profile%20Views&color=00f7ff&style=for-the-badge)
-![Followers](https://img.shields.io/github/followers/krix2112?label=Followers&style=for-the-badge&color=00f7ff)
-![Stars](https://img.shields.io/github/stars/krix2112?label=Total%20Stars&style=for-the-badge&color=00f7ff)
+<img src="https://komarev.com/ghpvc/?username=krix2112&label=Profile%20Views&color=00f7ff&style=for-the-badge" alt="Profile Views"/>
+<img src="https://img.shields.io/github/followers/krix2112?label=Followers&style=for-the-badge&color=00f7ff&logo=github" alt="Followers"/>
+<img src="https://img.shields.io/github/stars/krix2112?label=Total%20Stars&style=for-the-badge&color=00f7ff&logo=github" alt="Stars"/>
 
 </div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ---
 
@@ -331,18 +460,34 @@ experience_timeline = {
 
 <div align="center">
 
-```
-☑️ Complete CS50X Course
-☐ Build 10+ Full-Stack Projects
-☐ Contribute to 5+ Open Source Projects
-☑️ Win Another Hackathon
-☐ Master DSA (500+ Problems)
-☐ Learn Mobile Development
-☐ Build a SaaS Product
-☐ Get 1000+ GitHub Stars
-```
+<table>
+<tr>
+<td width="50%">
+
+### ✅ Completed
+- ✔️ Complete CS50X Course (80%)
+- ✔️ Win 2 Hackathons
+- ✔️ Lead a Team of 50+
+- ✔️ Build 6+ Projects
+- ✔️ Get National Recognition
+
+</td>
+<td width="50%">
+
+### 🎯 In Progress
+- 🔄 Master DSA (500+ Problems)
+- 🔄 Build SaaS Product
+- 🔄 Contribute to 5+ Open Source
+- 🔄 Learn Mobile Development
+- 🔄 Get 1000+ GitHub Stars
+
+</td>
+</tr>
+</table>
 
 </div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ---
 
@@ -352,6 +497,10 @@ experience_timeline = {
 <summary>🔐 Click to reveal secret message...</summary>
 
 <br>
+
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" alt="Secret" width="300"/>
 
 ```
 ╔═══════════════════════════════════════════════════════════╗
@@ -367,7 +516,13 @@ experience_timeline = {
 ╚═══════════════════════════════════════════════════════════╝
 ```
 
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="500">
+
+</div>
+
 </details>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ---
 
@@ -384,10 +539,14 @@ while(alive) {
 }
 ```
 
-### ⚡ **Thanks for visiting! Don't forget to check out my projects below! ⬇️**
+<img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400">
+
+### ⚡ **Thanks for visiting! Don't forget to star my repos! ⭐**
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+
+</div>
 
 ---
 
-<img src="https://raw.githubusercontent.com/Trilokia/Trilokia/379277808c61ef204768a61bbc5d25bc7798ccf1/bottom_header.svg" />
-
-</div>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=150&section=footer" />
