@@ -24,7 +24,7 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Building+the+future%2C+one+line+at+a+time;2x+Hackathon+Winner+%7C+2x+Gold+Medalist;Team+Lead+%7C+Campus+Ambassador;React+%7C+JavaScript+%7C+AI%2FML;Legal+Tech+%7C+Democracy+Tools+%7C+Accessibility;Always+learning%2C+always+growing" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Building+the+future%2C+one+line+at+a+time;1x+Hackathon+Winner+%7C+2x+Gold+Medalist;Team+Lead+%7C+Campus+Ambassador;React+%7C+JavaScript+%7C+AI%2FML;Legal+Tech+%7C+Democracy+Tools+%7C+Accessibility;Always+learning%2C+always+growing" alt="Typing SVG" />
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 
@@ -142,20 +142,6 @@ const Krishna = {
 
 <table>
 <tr>
-<td width="50%" valign="top">
-
-### ⚖️ NyayNeti MVP
-**🥈 2nd Place @ SnowStorm 24hr Hackathon**
-
-<img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" alt="Legal Tech" width="100%"/>
-
-**Tech:** JavaScript, AI, PDF Processing
-
-Revolutionary legal accessibility tool! Offline AI chatbot that processes PDF legal documents, compares them intelligently, and provides legal guidance without internet. Built in 24 hours!
-
-[![Repo](https://img.shields.io/badge/View_Code-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/krix2112/nyayneti-mvp-offline)
-
-</td>
 <td width="50%" valign="top">
 
 ### 🗳️ Electoral Roll Tracker
